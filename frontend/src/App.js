@@ -15,8 +15,10 @@ function App() {
       <div className="container dark">
         <div className="app">
           <Header />
-          <Route path="/" exact component={NotesListPage} />
-          <Route path="/note/:id" component={NotePage} />
+          <Routes>
+            <Route path="/" exact element={<NotesListPage/>} />
+            <Route path="/note/:id" component={<NotePage/>} />
+          </Routes>
         </div>
       </div>
     </Router>
