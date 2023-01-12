@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { ReactComponent as ArrowLeft } from '../assets/arrow-left.svg'
-import { Link } from 'react-router-dom'
+import { Link , useParams } from 'react-router-dom'
 
-const NotePage = ({ match, history }) => {
+const NotePage = ({ history }) => {
 
-    let noteId = match.params.id
+    const {id} = useParams() //Update
     let [note, setNote] = useState(null)
 
     useEffect(() => {
